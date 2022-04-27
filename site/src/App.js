@@ -15,7 +15,7 @@ function App() {
         <div class="container">
             
             
-        <a class="navbar-brand logo-image" href="index.html"><img src='images/SMU.png'/></a>  
+        <a class="navbar-brand logo-image" href="http://www.semyung.ac.kr/"><img src='images/SMU.png'/></a>  
 
            
             
@@ -117,9 +117,9 @@ function App() {
                     <div class="text-container">
                         <div class="image-container">
                             
-                                <img class="img-fluid" src="images/work-1.jpg" alt="alternative"/>
+                                <img class="img-fluid" src="images/윈터.jpg" alt="alternative"/>
                                 <input type='radio' id='1' name="select" />
-                                <label for="1">30대 남성</label>
+                                <label for="1">winter</label>
                         </div>
                         <p></p>
                     </div> 
