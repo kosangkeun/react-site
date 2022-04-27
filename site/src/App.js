@@ -15,10 +15,10 @@ function App() {
         <div class="container">
             
             
-        <a class="navbar-brand logo-image" href="index.html"><img src={logo}/></a>  
+        <a class="navbar-brand logo-image" href="index.html"><img src='images/SMU.png'/></a>  
 
            
-            <a class="navbar-brand logo-text page-scroll" href="index.html">Mark</a>
+            
 
             <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
                 <span class="navbar-toggler-icon"></span>
@@ -75,8 +75,8 @@ function App() {
             <div class="row">
                 <div class="col-lg-6">
                     <div class="text-container">
-                        <h1 class="h1-large">I love to create beautiful and efficient websites</h1>
-                        <a class="btn-solid-lg page-scroll" href="#about">Discover</a>
+                        <h1 class="h1-large">Facial Introduce</h1>
+                        <a class="btn-solid-lg page-scroll" href="#about">Start</a>
                         <a class="btn-outline-lg page-scroll" href="#contact"><i class="fas fa-user"></i>Contact Me</a>
                     </div> 
                 </div> 
@@ -88,196 +88,62 @@ function App() {
 
    
     <div id="about" class="basic-1 bg-gray">
+        <h1>Squence</h1>
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="text-container first">
-                        <h2>Hi there I'm Mark,</h2>
-                        <p>And I love to create beautiful and efficient websites for my customers. I love going through the entire process with the customer from concept, to design and then development and launch</p>
+                       <h4>1.Select image</h4>
                     </div> 
                 </div> 
                 <div class="col-lg-4">
-                    <div class="text-container second">
-                        <div class="time">2019 - PRESENT</div>
-                        <h6>Freelance Web Developer</h6>
-                        <p>Working happily on my own web projects</p>
-                        <div class="time">2018 - 2019</div>
-                        <h6>Lead Web Developer</h6>
-                        <p>Beautiful project for a major digital agency</p>
+                    <div class="text-container second">                    
+                        <h4>2.Input your voice</h4>
                     </div> 
                 </div> 
                 <div class="col-lg-4">
-                    <div class="text-container third">
-                        <div class="time">2017 - 2018</div>
-                        <h6>Senior Web Designer</h6>
-                        <p>Inhouse web designer for ecommerce firm</p>
-                        <div class="time">2016 - 2017</div>
-                        <h6>Junior Web Designer</h6>
-                        <p>Junior web designer for small web agency</p>
+                    <div class="text-container third">                        
+                        <h4>3.push translate button</h4>
                     </div> 
                 </div> 
             </div> 
         </div> 
     </div> 
    
-
-
-  
-    <div id="services" class="basic-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2 class="h2-heading">Offered services</h2>
-                    <p class="p-heading">Web design and development have been my bread and butter for more than 5 years. During that time I've discovered that I can help startups and companies with the following services</p>
-                </div> 
-            </div> 
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="text-box">
-                        <i class="far fa-gem"></i>
-                        <h4>DESIGN</h4>
-                        <p>Successful online projects start with good design. It establishes a solid foundation for future development and allows for long term growth</p>
-                    </div> 
-                </div> 
-                <div class="col-lg-4">
-                    <div class="text-box">
-                        <i class="fas fa-code"></i>
-                        <h4>DEVELOPMENT</h4>
-                        <p>I can code my own designs or even use the customer's design as base. My focus is to generate clean code that's well structured for reliability</p>
-                    </div> 
-                </div> 
-                <div class="col-lg-4">
-                    <div class="text-box">
-                        <i class="fas fa-tv"></i>
-                        <h4>BASIC SEO</h4>
-                        <p>i can setup your project to use basic SEO principles which will push your project to the first page on search engines and save you ads money</p>
-                    </div> 
-                </div> 
-            </div> 
-        </div> 
-    </div> 
-   
-
-
-   
-	<div class="split">
-		<div class="area-1">
-		</div>
-    <div class="area-2 bg-gray">
-            <div class="container">    
-                <div class="row">
-                    <div class="col-lg-12">     
-                        
-                     
-                        <div class="text-container">
-                            <h2>Why Work With Me</h2>
-                            <p>I am a great communicator and love to invest the necessary time to understand the customer's problem very well</p>
-                            <h5>DESIGN TOOLS</h5>
-                            <p>My favorite design tools are Photoshop and Illustrator but I can create designs in Figma, Sketch and Adobe XD too</p>
-                            <h5>DEVELOPMENT SKILLS</h5>
-                            <p>I am familiar and work on a daily basis with HTML, CSS, JavaScript, Bootstrap and other modern frameworks</p>
-                            
-                            <div class="icons-container">
-                                <img src="images/details-icon-photoshop.png" alt="alternative"/>
-                                <img src="images/details-icon-illustrator.png" alt="alternative"/>
-                                <img src="images/details-icon-html.png" alt="alternative"/>
-                                <img src="images/details-icon-css.png" alt="alternative"/>
-                                <img src="images/details-icon-bootstrap.png" alt="alternative"/>
-                                <img src="images/details-icon-javascript.png" alt="alternative"/>
-                            </div> 
-                        </div> 
-                       
-
-                    </div> 
-                </div> 
-            </div>
-		</div>
-    </div> 
-  
-
-
-    
-    <div id="projects" class="basic-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2 class="h2-heading">Delivered projects</h2>
-                    <p class="p-heading">Listed below are some of the most representative projects I've worked on. They range from basic web design for presentation sites to advanced web development for online shops</p>
-                </div> 
-            </div> 
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="text-container">
-                        <div class="image-container">
-                            <a href="project.html">
-                                <img class="img-fluid" src="images/project-1.jpg" alt="alternative"/>
-                            </a>
-                        </div> 
-                        <p><strong>For:</strong> Jumbotron, <strong>Project:</strong> web design for their corporate websites and landing pages for marketing campaigns <a class="blue" href="project.html">details</a></p>
-                    </div> 
-                    <div class="text-container">
-                        <div class="image-container">
-                            <a href="project.html">
-                                <img class="img-fluid" src="images/project-2.jpg" alt="alternative"/>
-                            </a>
-                        </div> 
-                        <p><strong>For:</strong> Carsrepo, <strong>Project:</strong> designed and developed modern platform for purchasing second hand cars online <a class="blue" href="project.html">details</a></p>
-                    </div> 
-                    <div class="text-container">
-                        <div class="image-container">
-                            <a href="project.html">
-                                <img class="img-fluid" src="images/project-3.jpg" alt="alternative"/>
-                            </a>
-                        </div> 
-                        <p><strong>For:</strong> Truevideo, <strong>Project:</strong> created a custom video editing and upload web app for this awesome team <a class="blue" href="project.html">details</a></p>
-                    </div> 
-                    <div class="text-container">
-                        <div class="image-container">
-                            <a href="project.html">
-                                <img class="img-fluid" src="images/project-4.jpg" alt="alternative"/>
-                            </a>
-                        </div> 
-                        <p><strong>For:</strong> Evolosim, <strong>Project:</strong> complete redesign of their corporate website and platform update for their online shop <a class="blue" href="project.html">details</a></p>
-                    </div> 
-                </div>
-            </div> 
-        </div> 
-    </div> 
-
-
-
-
     <div class="basic-4">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="text-container">
                         <div class="image-container">
-                            <a href="project.html">
+                            
                                 <img class="img-fluid" src="images/work-1.jpg" alt="alternative"/>
-                            </a>
+                                <input type='radio' id='1' name="select" />
+                                <label for="1">30대 남성</label>
                         </div>
-                        <p><strong>For:</strong> Zigoland, <strong>Project:</strong> started a new website from ground up for a new product <a class="blue" href="project.html">details</a></p>
+                        <p></p>
                     </div> 
                 </div> 
                 <div class="col-lg-4">
                     <div class="text-container">
                         <div class="image-container">
-                            <a href="project.html">
+                            
                                 <img class="img-fluid" src="images/work-2.jpg" alt="alternative"/>
-                            </a>
+                                <input type='radio' id='2' name="select" />
+                                <label for="2">20대 남성</label>
                         </div> 
-                        <p><strong>For:</strong> Visodream, <strong>Project:</strong> developed a new forum for the Visodream community <a class="blue" href="project.html">details</a></p>
+                        
                     </div> 
                 </div> 
                 <div class="col-lg-4">
                     <div class="text-container">
                         <div class="image-container">
-                            <a href="project.html">
+                            
                                 <img class="img-fluid" src="images/work-3.jpg" alt="alternative"/>
-                            </a>
+                                <input type='radio' id='3' name="select" />
+                                <label for="3">10대 남성</label>
                         </div> 
-                        <p><strong>For:</strong> Primoday, <strong>Project:</strong> complete redesign of their corporate website and platform <a class="blue" href="project.html">details</a></p>
+                       
                     </div>
                 </div>
             </div> 
@@ -285,31 +151,34 @@ function App() {
                 <div class="col-lg-4">
                     <div class="text-container">
                         <div class="image-container">
-                            <a href="project.html">
+                            
                                 <img class="img-fluid" src="images/work-4.jpg" alt="alternative"/>
-                            </a>
+                                <input type='radio' id='4' name="select" />
+                                <label for="4">30대 여성</label>
                         </div> 
-                        <p><strong>For:</strong> Nextlite, <strong>Project:</strong> created a custom video editing and upload web app <a class="blue" href="project.html">details</a></p>
+                        
                     </div> 
                 </div> 
                 <div class="col-lg-4">
                     <div class="text-container">
                         <div class="image-container">
-                            <a href="project.html">
+                            
                                 <img class="img-fluid" src="images/work-5.jpg" alt="alternative"/>
-                            </a>
+                                <input type='radio' id='5' name="select" />
+                                <label for="5">20대 여성</label>
                         </div> 
-                        <p><strong>For:</strong> Syncnow, <strong>Project:</strong> web design for their corporate websites and landing pages <a class="blue" href="project.html">details</a></p>
+                        
                     </div> 
                 </div> 
                 <div class="col-lg-4">
                     <div class="text-container">
                         <div class="image-container">
-                            <a href="project.html">
+                            
                                 <img class="img-fluid" src="images/work-6.jpg" alt="alternative"/>
-                            </a>
+                                <input type='radio' id='6' name="select" />
+                                <label for="6">10대 여성</label>
                         </div> 
-                        <p><strong>For:</strong> Shifter, <strong>Project:</strong> started a new website from ground up for a new product <a class="blue" href="project.html">details</a></p>
+                        
                     </div> 
                 </div> 
             </div> 

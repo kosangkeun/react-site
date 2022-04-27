@@ -372,7 +372,7 @@ input[type='checkbox'] {
 /*     Navigation     */
 /**********************/
 .navbar {
-	background-color: #24262a;
+	background-color: #000000;
 	font-weight: 600;
 	font-size: 0.875rem;
 	line-height: 0.875rem;
@@ -385,8 +385,8 @@ input[type='checkbox'] {
 }
 
 .navbar .logo-image img {
-    width: 118px;
-	height: 36px;
+    width: 90px;
+	height: 50px;
 }
 
 .navbar .logo-text {
@@ -718,9 +718,9 @@ input[type='checkbox'] {
 }
 
 .basic-4 .image-container:hover img {
-	-moz-transform: scale(1.15);
-	-webkit-transform: scale(1.15);
-	transform: scale(1.15);
+	-moz-transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+	transform: scale(1.05);
 } 
 /* end of hover animation */
 
@@ -1040,8 +1040,8 @@ a:hover.back-to-top {
 
 	/* Navigation */
 	.navbar {
-		padding-top: 1.75rem;
-		background-color: transparent;
+		padding-top: 1rem;
+		background-color: #000000;
 		box-shadow: none;
 		transition: all 0.2s;
 	}
