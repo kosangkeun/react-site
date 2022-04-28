@@ -68,6 +68,10 @@ function App() {
                 <div class="col-lg-6">
                     <div class="text-container">
                         <h1 class="h1-large">Facial Introduce</h1>
+                        <p class="introduce"> 외국 영화, 드라마 등의 영상 매체를 우리말로 더빙한 컨텐츠들은 입모양이 맞지 않는 문제가 있습니다</p>
+                        
+                        <p class="introduce"> 예를 들어서 할리우드 영화 등을 보면, 원본 언어는 영어이고, 배우들 또한 영어로 말하지만, 이를 한국어로 더빙하게 되면 배우들의 입모양이 맞지 않는다는것은 당연할 것입니다</p>
+                        <p class="introduce"> Talking Face 분야는, 사람이 말하는 목소리와 인물의 정면 얼굴 사진이 들어갔을때, 해당 사진속의 인물이 동시에 입력된 목소리로 말하는 듯하게 동영상으로 만들어주는 테스크 입니다</p>
                         <a class="btn-solid-lg page-scroll" href="#about">Start</a>
                         <a class="btn-outline-lg page-scroll" href="#contact"><i class="fas fa-user"></i>Contact Me</a>
                     </div> 
@@ -86,29 +90,36 @@ function App() {
                 <div class="col-lg-4">
                     <div class="text-container first">
                        <h4>1.Select image</h4>
+                       
                     </div> 
+                    <img src="images/Select Image.png" width="100%" height="100%"/>
                 </div> 
                 <div class="col-lg-4">
                     <div class="text-container second">                    
                         <h4>2.Input your voice</h4>
                     </div> 
+                    <img src="images/Voice.png" width="100%" height="100%"/>
                 </div> 
                 <div class="col-lg-4">
                     <div class="text-container third">                        
-                        <h4>3.push translate button</h4>
+                        <h4>3.Result</h4>
                     </div> 
+                    <img src="images/Result.jpg" width="100%" height="100%"/>
                 </div> 
             </div> 
         </div> 
     </div> 
    
     <div class="basic-4">
-        <h2>1. Select Image</h2>
+    <h2 id='Select'>1. Select Image</h2>
+        
         <form>
         <div class="container">
+            
             <div class="row">
                 <div class="col-lg-4">
                     <div class="text-container">
+                        
                         <div class="image-container">
                             
                                 <img class="img-fluid" src="images/윈터.jpg" alt="alternative"/>
@@ -171,8 +182,8 @@ function App() {
                 </div> 
                 
             </div>
-            <input type="file" id="avatar" name="avatar" accept="audio/*"></input>
-            <div class="form-group"><button type="submit" class="form-control-submit-button">전송</button></div>
+            
+            
 
         </div> 
         </form>
@@ -190,51 +201,24 @@ function App() {
                 </div> 
             </div> 
             <div class="row">
-                <div class="col-lg-12">
-                    
-                    
-                    <div class="card">
-                        <div class="card-body">
-                            <p class="testimonial-text">“Mark is a skilled developer which will do everything possible to deliver the project on time and I really appreciate that”</p>
-                            <div class="details">
-                                <img src="images/testimonial-1.jpg" alt="alternative"/>
-                                <div class="text">
-                                    <div class="testimonial-author">Samantha Bloom</div>
-                                    <div class="occupation">Team Leader - Syncnow</div>
-                                </div> 
-                            </div> 
-                        </div>
-                    </div>
-                    
+                <div class="col-lg-12">                   
+                                                         
 
                     
                     <div class="card">
                         <div class="card-body">
-                            <p class="testimonial-text">“Loved to work with Mark he's such an awesome developer with great attention to details. He also has a great eye for design”</p>
-                            <div class="details">
-                                <img src="images/testimonial-2.jpg" alt="alternative"/>
-                                <div class="text">
-                                    <div class="testimonial-author">John Rowling</div>
-                                    <div class="occupation">Marketing Manager - Nexlite</div>
-                                </div> 
-                            </div> 
+                        <form>
+                        <input type="file" id="avatar" name="avatar" accept="audio/*"></input>
+                        
+                        </form>
                         </div>
+                        
                     </div>
+                    <div class="form-group"><button type="submit" class="form-control-submit-button">전송</button></div>
                     
 
                    
-                    <div class="card">
-                        <div class="card-body">
-                            <p class="testimonial-text">“So glad we started working with Mark. We've used many times his design and development skills for our inhouse online projects”</p>
-                            <div class="details">
-                                <img src="images/testimonial-3.jpg" alt="alternative"/>
-                                <div class="text">
-                                    <div class="testimonial-author">Lana Smith</div>
-                                    <div class="occupation">General Manager - Shifter</div>
-                                </div> 
-                            </div> 
-                        </div>
-                    </div>
+                    
                     
 
                 </div> 
@@ -259,7 +243,8 @@ function App() {
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="h2-heading">Frequent questions</h2>
+                    <h2 class="h2-heading">Result</h2>
+                    
                 </div> 
             </div> 
             <div class="row">
@@ -267,65 +252,13 @@ function App() {
 
                     <div class="accordion" id="accordionExample">
                         <div class="card">
-                            <div class="card-header" id="headingOne">
-                                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    How can I contact you and quickly get a quote for my online project?
-                                </button>
-                            </div>
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    The best way to reach me is through the contact form of by messaging me on my social media accounts. For a fast quote make sure your provide many project details
-                                </div>
-                            </div>
+                            <img src='images/Result.jpg' width="100%" height="100%"/>
+                            
                         </div>
-                        <div class="card">
-                            <div class="card-header" id="headingTwo">
-                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Do you create designs from the ground up or you are using themes?
-                                </button>
-                            </div>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    The best way to reach me is through the contact form of by messaging me on my social media accounts. For a fast quote make sure your provide many project details
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingThree">
-                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Will I receive any included maintenance or warranty after project delivery?
-                                </button>
-                            </div>
-                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    The best way to reach me is through the contact form of by messaging me on my social media accounts. For a fast quote make sure your provide many project details
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingFour">
-                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    If something goes wrong with the project can I have my money back?
-                                </button>
-                            </div>
-                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    The best way to reach me is through the contact form of by messaging me on my social media accounts. For a fast quote make sure your provide many project details
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingFive">
-                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                    What's your preferred method of payment and do you need an advance?
-                                </button>
-                            </div>
-                            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    The best way to reach me is through the contact form of by messaging me on my social media accounts. For a fast quote make sure your provide many project details
-                                </div>
-                            </div>
-                        </div>
+                        
+                        
+                        
+                       
                     </div> 
 
                 </div> 
