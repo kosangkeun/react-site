@@ -111,6 +111,7 @@ function App() {
     </div> 
    
     <div class="basic-4">
+        <form action = " " name= "img form" method ="post">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
@@ -118,7 +119,6 @@ function App() {
                         <div class="image-container">
                             
                                 <img class="img-fluid" src="images/윈터.jpg" alt="alternative"/>
-                                <input type='radio' id='1' name="select" />
                                 <label for="1">winter</label>
                         </div>
                         <p></p>
@@ -128,9 +128,8 @@ function App() {
                     <div class="text-container">
                         <div class="image-container">
                             
-                                <img class="img-fluid" src="images/work-2.jpg" alt="alternative"/>
-                                <input type='radio' id='2' name="select" />
-                                <label for="2">20대 남성</label>
+                                <img class="img-fluid" src="images/수지.jpg" alt="alternative"/>
+                                <label for="2">수지</label>
                         </div> 
                         
                     </div> 
@@ -139,9 +138,8 @@ function App() {
                     <div class="text-container">
                         <div class="image-container">
                             
-                                <img class="img-fluid" src="images/work-3.jpg" alt="alternative"/>
-                                <input type='radio' id='3' name="select" />
-                                <label for="3">10대 남성</label>
+                                <img class="img-fluid" src="images/김태리.jpg" alt="alternative"/>
+                                <label for="3">김태리</label>
                         </div> 
                        
                     </div>
@@ -152,9 +150,8 @@ function App() {
                     <div class="text-container">
                         <div class="image-container">
                             
-                                <img class="img-fluid" src="images/work-4.jpg" alt="alternative"/>
-                                <input type='radio' id='4' name="select" />
-                                <label for="4">30대 여성</label>
+                                <img class="img-fluid" src="images/김태희.jpg" alt="alternative"/>
+                                <label for="4">김태희</label>
                         </div> 
                         
                     </div> 
@@ -163,9 +160,8 @@ function App() {
                     <div class="text-container">
                         <div class="image-container">
                             
-                                <img class="img-fluid" src="images/work-5.jpg" alt="alternative"/>
-                                <input type='radio' id='5' name="select" />
-                                <label for="5">20대 여성</label>
+                                <img class="img-fluid" src="images/카리나.jpg" alt="alternative"/>
+                                <label for="5">카리나</label>
                         </div> 
                         
                     </div> 
@@ -174,16 +170,29 @@ function App() {
                     <div class="text-container">
                         <div class="image-container">
                             
-                                <img class="img-fluid" src="images/work-6.jpg" alt="alternative"/>
-                                <input type='radio' id='6' name="select" />
-                                <label for="6">10대 여성</label>
+                                <img class="img-fluid" src="images/김세정.jpg" alt="alternative"/>
+                                <label for="6">김세정</label>
                         </div> 
                         
                     </div> 
                 </div> 
-            </div> 
+                
+            </div>
+
+            <div class="form-group">
+                            <button type="submit" class="form-control-submit-button">전송</button>
+            </div>
+
+            <input type="file"
+               id="avatar" name="avatar"
+                 accept="image/png, image/jpeg">
+            </input>
+
         </div> 
+        </form>
     </div> 
+
+    <div></div>
     
 
 

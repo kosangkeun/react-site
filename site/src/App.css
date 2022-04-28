@@ -13,6 +13,12 @@
   }
 }
 
+
+.img-fluid { 
+  width: auto; height: auto;
+  max-width: 350px;
+  max-height: 437px; }
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
