@@ -30,8 +30,21 @@ const Form = () => {
     }
   
     const handleFileSelect = (event) => {
-      setSelectedFile(event.target.files[0])
+      
+      const file = event.target.files[0];
+      getBase64(file);
+      
+
     }
+    const getBase64 = (file) => {
+        let reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = () => {
+          // setEncodedFile(reader.result);
+          setSelectedFile(reader.result);
+          // onLoad(reader.result);
+        };
+      };
   
     return (
       <form onSubmit={handleSubmit}>
