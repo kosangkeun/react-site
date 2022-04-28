@@ -33,17 +33,7 @@ function App() {
                         <a class="nav-link page-scroll" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#services">Services</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Drop</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdown01">
-                            <a class="dropdown-item page-scroll" href="project.html">Project Details</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item page-scroll" href="terms.html">Terms Conditions</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item page-scroll" href="privacy.html">Privacy Policy</a>
-                        </div>
+                        <a class="nav-link page-scroll" href="#mike">mike</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="#contact">Contact</a>
@@ -119,9 +109,7 @@ function App() {
                         <div class="image-container">
                             
                                 <img class="img-fluid" src="images/윈터.jpg" alt="alternative"/>
-                                <label for="1">winter</label>
                         </div>
-                        <p></p>
                     </div> 
                 </div> 
                 <div class="col-lg-4">
@@ -129,7 +117,6 @@ function App() {
                         <div class="image-container">
                             
                                 <img class="img-fluid" src="images/수지.jpg" alt="alternative"/>
-                                <label for="2">수지</label>
                         </div> 
                         
                     </div> 
@@ -138,8 +125,8 @@ function App() {
                     <div class="text-container">
                         <div class="image-container">
                             
-                                <img class="img-fluid" src="images/김태리.jpg" alt="alternative"/>
-                                <label for="3">김태리</label>
+                                <img class="img-fluid" href="#mike" src="images/김태리.jpg" alt="alternative"/>
+                                <a>href="#mike"</a>
                         </div> 
                        
                     </div>
@@ -151,7 +138,6 @@ function App() {
                         <div class="image-container">
                             
                                 <img class="img-fluid" src="images/김태희.jpg" alt="alternative"/>
-                                <label for="4">김태희</label>
                         </div> 
                         
                     </div> 
@@ -161,7 +147,6 @@ function App() {
                         <div class="image-container">
                             
                                 <img class="img-fluid" src="images/카리나.jpg" alt="alternative"/>
-                                <label for="5">카리나</label>
                         </div> 
                         
                     </div> 
@@ -171,7 +156,6 @@ function App() {
                         <div class="image-container">
                             
                                 <img class="img-fluid" src="images/김세정.jpg" alt="alternative"/>
-                                <label for="6">김세정</label>
                         </div> 
                         
                     </div> 
@@ -196,7 +180,7 @@ function App() {
     
 
 
-    <div class="cards-1">
+    <div class="cards-1" id = "mike">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
