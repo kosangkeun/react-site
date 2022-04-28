@@ -1,9 +1,10 @@
 
 import './App.css';
-import logo from './logo.svg';
 import '../src/bootstrap.css';
 import '../src/styles.css';
 import '../src/fontawesome-all.css';
+import axios from "axios";
+import { useEffect, useState } from "react";
 function App() {
   return (
     <div className="App">
@@ -27,16 +28,17 @@ function App() {
             <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#header">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link page-scroll" href="#header">Home <span class="sr-only"></span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#about">About</a>
+                        <a class="nav-link page-scroll" href="#about">Select Image</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#mike">mike</a>
+                        <a class="nav-link page-scroll" href="#services">Voice</a>
                     </li>
+                    
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#contact">Contact</a>
+                        <a class="nav-link page-scroll" href="#contact">Result</a>
                     </li>
                 </ul>
                 <span class="nav-item social-icons">
@@ -101,7 +103,8 @@ function App() {
     </div> 
    
     <div class="basic-4">
-        <form action = " " name= "img form" method ="post">
+        <h2>1. Select Image</h2>
+        <form>
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
@@ -109,7 +112,9 @@ function App() {
                         <div class="image-container">
                             
                                 <img class="img-fluid" src="images/윈터.jpg" alt="alternative"/>
+                                
                         </div>
+                        <p></p>
                     </div> 
                 </div> 
                 <div class="col-lg-4">
@@ -117,6 +122,7 @@ function App() {
                         <div class="image-container">
                             
                                 <img class="img-fluid" src="images/수지.jpg" alt="alternative"/>
+                                
                         </div> 
                         
                     </div> 
@@ -125,8 +131,8 @@ function App() {
                     <div class="text-container">
                         <div class="image-container">
                             
-                                <img class="img-fluid" href="#mike" src="images/김태리.jpg" alt="alternative"/>
-                                <a>href="#mike"</a>
+                                <img class="img-fluid" src="images/김태리.jpg" alt="alternative"/>
+                                
                         </div> 
                        
                     </div>
@@ -138,6 +144,7 @@ function App() {
                         <div class="image-container">
                             
                                 <img class="img-fluid" src="images/김태희.jpg" alt="alternative"/>
+                                
                         </div> 
                         
                     </div> 
@@ -147,6 +154,7 @@ function App() {
                         <div class="image-container">
                             
                                 <img class="img-fluid" src="images/카리나.jpg" alt="alternative"/>
+                                
                         </div> 
                         
                     </div> 
@@ -156,21 +164,15 @@ function App() {
                         <div class="image-container">
                             
                                 <img class="img-fluid" src="images/김세정.jpg" alt="alternative"/>
+                                
                         </div> 
                         
                     </div> 
                 </div> 
                 
             </div>
-
-            <div class="form-group">
-                            <button type="submit" class="form-control-submit-button">전송</button>
-            </div>
-
-            <input type="file"
-               id="avatar" name="avatar"
-                 accept="image/png, image/jpeg">
-            </input>
+            <input type="file" id="avatar" name="avatar" accept="audio/*"></input>
+            <div class="form-group"><button type="submit" class="form-control-submit-button">전송</button></div>
 
         </div> 
         </form>
@@ -180,11 +182,11 @@ function App() {
     
 
 
-    <div class="cards-1" id = "mike">
+    <div class="cards-1">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="h2-heading">A few words from people that chose to work with me</h2>
+                    <h2 class="h2-heading">2. Input Your Voice</h2>
                 </div> 
             </div> 
             <div class="row">
