@@ -191,7 +191,7 @@ function App() {
                     <div class="text-container">
                         <div class="image-container">
                             
-                                <img class="img-fluid" src="images/김태리.jpg" alt="alternative"/>
+                                <img class="img-fluid" src="images/츄.jpg" alt="alternative"/>
                                 
                         </div> 
                        
