@@ -154,7 +154,7 @@ function App() {
                     <div class="text-container">
                         <div class="image-container">
                             
-                                <img class="img-fluid" src="images/김태희.jpg" alt="alternative"/>
+                                <img class="img-fluid" src="images/박보영.jpg" alt="alternative"/>
                                 
                         </div> 
                         
