@@ -4,7 +4,43 @@ import '../src/bootstrap.css';
 import '../src/styles.css';
 import '../src/fontawesome-all.css';
 import axios from "axios";
-import { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
+import base64 from 'base-64';
+
+
+const Form = () => {
+    // a local state to store the currently selected file.
+    const [selectedFile, setSelectedFile] = React.useState(null);
+  
+    const handleSubmit = async(event) => {
+      event.preventDefault()
+      const formData = new FormData();
+      formData.append("selectedFile", selectedFile);
+      try {
+        const response = await axios({
+          method: "post",
+          url: "/images",
+          
+          data: base64(formData),
+          headers: { "Content-Type": "multipart/form-data" },
+        });
+      } catch(error) {
+        console.log(error)
+      }
+    }
+  
+    const handleFileSelect = (event) => {
+      setSelectedFile(event.target.files[0])
+    }
+  
+    return (
+      <form onSubmit={handleSubmit}>
+        <input type="file" onChange={handleFileSelect}/>
+        <button type="submit" value="Upload File" />
+      </form>
+    )
+  };
+
 function App() {
   return (
     <div className="App">
@@ -113,7 +149,7 @@ function App() {
     <div class="basic-4">
     <h2 id='Select'>1. Select Image</h2>
         
-        <form>
+        
         <div class="container">
             
             <div class="row">
@@ -186,7 +222,7 @@ function App() {
             
 
         </div> 
-        </form>
+        
     </div> 
 
     <div></div>
@@ -204,17 +240,18 @@ function App() {
                 <div class="col-lg-12">                   
                                                          
 
-                    
+                <form>
                     <div class="card">
                         <div class="card-body">
-                        <form>
+                        
                         <input type="file" id="avatar" name="avatar" accept="audio/*"></input>
                         
-                        </form>
+                        
                         </div>
                         
                     </div>
                     <div class="form-group"><button type="submit" class="form-control-submit-button">전송</button></div>
+                    </form>
                     
 
                    
