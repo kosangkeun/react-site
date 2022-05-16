@@ -80,14 +80,14 @@ function App() {
                         <a class="nav-link page-scroll" href="#header">Home <span class="sr-only"></span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#about">Select Image</a>
+                        <a class="nav-link page-scroll" href="#Select">Select Image</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#services">Voice</a>
+                        <a class="nav-link page-scroll" href="#cards-1">Voice</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#contact">Result</a>
+                        <a class="nav-link page-scroll" href="#accordion-1">Result</a>
                     </li>
                 </ul>
                 <span class="nav-item social-icons">
@@ -242,7 +242,7 @@ function App() {
     
 
 
-    <div class="cards-1">
+    <div id="cards-1">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -289,7 +289,7 @@ function App() {
 
 
  
-    <div class="accordion-1">
+    <div id="accordion-1">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
