@@ -12,6 +12,7 @@ import boyuong from '../src/박보영.jpg';
 import suzy from '../src/수지.jpg';
 import winter from '../src/윈터.jpg';
 import kalina from '../src/카리나.jpg';
+import AudioRecord from './AudioRecord';
 
 const Form = () => {
     // a local state to store the currently selected file.
@@ -24,7 +25,7 @@ const Form = () => {
       try {
         const response = await axios({
           method: "post",
-          url: "/images",
+          url: "192.168.154.43:5000",
           
           data: base64(formData),
           headers: { "Content-Type": "multipart/form-data" },
@@ -266,15 +267,17 @@ function App() {
                 <form>
                     <div class="card">
                         <div class="card-body">
-                        
+
                         <input type="file" id="avatar" name="avatar" accept="audio/*"></input>
                         
-                        
                         </div>
-                        
                     </div>
-                    <div class="form-group"><button type="submit" class="form-control-submit-button">전송</button></div>
-                    </form>
+
+                    <div className="form-group">
+                        <AudioRecord></AudioRecord>
+                    </div>
+                
+                </form>
                     
 
                    
