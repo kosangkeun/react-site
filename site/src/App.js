@@ -7,7 +7,11 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import base64 from 'base-64';
 import chu from '../src/츄.jpg';
-
+import sejeng from '../src/김세정.jpg';
+import boyuong from '../src/박보영.jpg';
+import suzy from '../src/수지.jpg';
+import winter from '../src/윈터.jpg';
+import kalina from '../src/카리나.jpg';
 
 const Form = () => {
     // a local state to store the currently selected file.
@@ -177,7 +181,7 @@ function App() {
                         
                         <div class="image-container">
                             
-                                <img class="img-fluid" src="images/윈터.jpg" alt="alternative"/>
+                                <img class="img-fluid" src={winter} alt="alternative" onClick={(e) => getImgBase64(winter)}/>
                                 
                         </div>
                         <p></p>
@@ -187,7 +191,7 @@ function App() {
                     <div class="text-container">
                         <div class="image-container">
                             
-                                <img class="img-fluid" src="images/수지.jpg" alt="alternative"/>
+                                <img class="img-fluid" src={suzy} alt="alternative" onClick={(e) => getImgBase64(suzy)}/>
                                 
                         </div> 
                         
@@ -209,7 +213,7 @@ function App() {
                     <div class="text-container">
                         <div class="image-container">
                             
-                                <img class="img-fluid" src="images/박보영.jpg" alt="alternative"/>
+                                <img class="img-fluid" src={boyuong} alt="alternative" onClick={(e) => getImgBase64(boyuong)}/>
                                 
                         </div> 
                         
@@ -219,7 +223,7 @@ function App() {
                     <div class="text-container">
                         <div class="image-container">
                             
-                                <img class="img-fluid" src="images/카리나.jpg" alt="alternative"/>
+                                <img class="img-fluid" src={kalina} alt="alternative" onClick={(e) => getImgBase64(kalina)}/>
                                 
                         </div> 
                         
@@ -229,7 +233,7 @@ function App() {
                     <div class="text-container">
                         <div class="image-container">
                             
-                                <img class="img-fluid" src="images/김세정.jpg" alt="alternative"/>
+                                <img class="img-fluid" src={sejeng} alt="alternative" onClick={(e) => getImgBase64(sejeng)}/>
                                 
                         </div> 
                         
