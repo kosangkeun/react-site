@@ -6,6 +6,7 @@ import '../src/fontawesome-all.css';
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import base64 from 'base-64';
+import chu from '../src/츄.jpg';
 
 
 const Form = () => {
@@ -45,6 +46,8 @@ const Form = () => {
           // onLoad(reader.result);
         };
       };
+
+    
   
     return (
       <form onSubmit={handleSubmit}>
@@ -55,6 +58,23 @@ const Form = () => {
   };
 
 function App() {
+
+
+    const getImgBase64 = async (file) => {
+        
+        const blob = await (await fetch(file)).blob(); 
+        console.log(blob)
+        let reader = new FileReader();
+        reader.readAsDataURL(blob);
+        reader.onload = () => {
+          // setEncodedFile(reader.result);
+          setImgValue(reader.result);
+          console.log(reader.result);
+          // onLoad(reader.result);
+        };
+      };
+
+    const [imgValue, setImgValue] = useState("images/윈터.jpg");
   return (
     <div className="App">
 
@@ -177,7 +197,7 @@ function App() {
                     <div class="text-container">
                         <div class="image-container">
                             
-                                <img class="img-fluid" src="images/츄.jpg" alt="alternative"/>
+                                <img class="img-fluid" src={chu} alt="alternative" onClick={(e) => getImgBase64(chu)}/>
                                 
                         </div> 
                        
