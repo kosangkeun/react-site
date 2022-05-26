@@ -4,42 +4,46 @@ import axios from 'axios';
 
 
 function Inputvoice(){
-  const [audio, setAudio] = useState({audio_file:"",});
-  const onChangeImg = (e) => {
-    e.preventDefault();
-    const fileReader = new FileReader();
-    if(e.target.files[0]){
-    fileReader.readAsDataURL(e.target.files[0])}
-    fileReader.onload = () => {
-      setAudio(
-        {
-          audio_file: e.target.files[0],
-          
-        }
-      )
-      
-     
-  
-  }
-  
-};
-  
 
+  const [audio_base64, setAudioBase64] = useState("");
+  const [audio, setAudio] = useState(new File([], ""));
+  
+  var request_json = {
+    uuid: '',
+    selected_model: '',
+    voice: '',
+  };
+
+  const getAudioBase64 = async (file) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      console.log(reader.result);
+      setAudioBase64(reader.result);
+    };
+  };
+
+  const onChangeAudio = (e) => {
+    e.preventDefault();
+    const reader = new FileReader();
+    if(e.target.files[0]){
+      reader.readAsDataURL(e.target.files[0])
+      setAudio(e.target.files[0])
+    }
+  };
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    console.log(audio.audio_file)
-    if(setAudio){
-      
-      const formData = new FormData()
-      formData.append('files',audio.audio_file)
-      
+    console.log(audio)
+    await getAudioBase64(audio);
+    request_json['voice'] = audio_base64;
+    if(audio){
       await axios({
         method: 'post',
-        url: '192.168.154.43:5000',
-        data: formData,
+        url: 'http://192.168.154.43:5000',
+        data: JSON.stringify(request_json),
         headers: {
-          'Content-Type': 'multipart/form-data',
+          'Content-Type': 'application/json',
         },
       });
     }
@@ -60,8 +64,7 @@ function Inputvoice(){
                 <form onSubmit={onSubmit}>
                     <div class="card">
                         <div class="card-body">
-
-                        <input type="file" id="avatar" name="avatar" accept="audio/*" onChange={onChangeImg}></input>
+                        <input type="file" id="avatar" name="avatar" accept="audio/*" onChange={onChangeAudio}></input>
                         <button type="submit" class="form-control-submit-button"  value="Upload File"  >전송</button>
                         </div>
                     </div>
