@@ -13,53 +13,7 @@ import Selectimg from './Selectimg';
 import Resultimg from './Resultimg';
 import Footers from './Footers';
 import Inputvoice from './Inputvoice';
-const Form = () => {
-    // a local state to store the currently selected file.
-    const [selectedFile, setSelectedFile] = React.useState(null);
-  
-    const handleSubmit = async(event) => {
-      event.preventDefault()
-      const formData = new FormData();
-      formData.append("selectedFile", selectedFile);
-      try {
-        const response = await axios({
-          method: "post",
-          url: "192.168.154.43:5000",
-          
-          data: base64(formData),
-          headers: { "Content-Type": "multipart/form-data" },
-        });
-      } catch(error) {
-        console.log(error)
-      }
-    }
-  
-    const handleFileSelect = (event) => {
-      
-      const file = event.target.files[0];
-      getBase64(file);
-      
-
-    }
-    const getBase64 = (file) => {
-        let reader = new FileReader();
-        reader.readAsDataURL(file);
-        reader.onload = () => {
-          // setEncodedFile(reader.result);
-          setSelectedFile(reader.result);
-          // onLoad(reader.result);
-        };
-      };
-
     
-  
-    return (
-      <form onSubmit={handleSubmit}>
-        <input type="file" onChange={handleFileSelect}/>
-        <button type="submit" value="Upload File" />
-      </form>
-    )
-  };
 
 function App() {
 
