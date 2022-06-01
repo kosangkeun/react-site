@@ -13,12 +13,11 @@ import Selectimg from './Selectimg';
 import Resultimg from './Resultimg';
 import Footers from './Footers';
 import Inputvoice from './Inputvoice';
-    
+import uuid from 'react-uuid';
 
 function App() {
 
-
-    
+  
   return (
     <div className="App">
 
