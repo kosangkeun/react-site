@@ -1,22 +1,18 @@
 import { useState } from 'react';
-import AudioRecord from "./AudioRecord";
 import axios from 'axios';
 import uuid from 'react-uuid';
-import model_Number from './Selectimg'
 
-function Inputvoice(){
+function Inputvoice({keynum}){
 
-  const Selected_model = model_Number();
 
   const userId = uuid();
-  console.log(userId);  
 
   const [audio_base64, setAudioBase64] = useState("");
   const [audio, setAudio] = useState(new File([], ""));
   
   var request_json = {
     uuid: userId,
-    selected_model: Selected_model,
+    selected_model: keynum,
     voice: '',
   };
 

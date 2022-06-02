@@ -17,6 +17,9 @@ import uuid from 'react-uuid';
 
 function App() {
 
+  const [img_num, set_img_num] = useState(0);
+
+
   
   return (
     <div className="App">
@@ -24,12 +27,12 @@ function App() {
     <HEADER/>
     <Intro/>
     <Sequence/>
-    <Selectimg/>
+    <Selectimg setkeynum={set_img_num}/>
     
 
     <div></div>
     
-    <Inputvoice/>
+    <Inputvoice keynum={img_num}/>
     <Resultimg/>
     <Footers/>
            

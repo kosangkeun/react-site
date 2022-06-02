@@ -6,6 +6,8 @@ import suzy from '../src/수지.jpg';
 import winter from '../src/윈터.jpg';
 import kalina from '../src/카리나.jpg';
 import React, { useState, useEffect } from "react";
+
+
 // function Selectimg(){
 //     const getImgBase64 = async (file) => {
         
@@ -22,7 +24,7 @@ import React, { useState, useEffect } from "react";
 //         };
 //       };
 
-function Selectimg(){
+function Selectimg({setkeynum}){
     // const getImgmodel = async (file) => {
         
     //     const blob = await (await fetch(file));
@@ -46,7 +48,7 @@ function Selectimg(){
     
     const model_Img = [winter, suzy, chu, boyuong, kalina, sejeng];
     const modelList = model_Img.map(
-        (model_Img, model_Number) => (<img key={model_Number} src={model_Img} style={model_Size} onClick={(e) => console.log(model_Number)}/>));
+        (model_Img, model_Number) => (<img key={model_Number} src={model_Img} style={model_Size} onClick={(e) => setkeynum(model_Number)}/>));
     
     
     return(
@@ -126,8 +128,9 @@ function Selectimg(){
             
 
         </div> 
-        
+
     </div> 
+    
     )
 }
 export default Selectimg
