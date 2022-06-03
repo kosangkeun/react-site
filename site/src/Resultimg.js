@@ -11,7 +11,7 @@ function Resultimg(){
             );
             setData(response.data);
         } catch (e) {
-          console.log(e);
+          console.log(e);           // e -> request_json로 바꿔야 될수도 있음
         }
     };
 
@@ -29,6 +29,7 @@ function Resultimg(){
                 <div class="col-lg-12">
                     <div class="accordion" id="accordionExample">
                         <div class="card">
+                            
                             <div>
                                 <div>
                                     <button onClick={onClick}>불러오기</button>
@@ -39,9 +40,10 @@ function Resultimg(){
                                         rows={7}
                                         value={JSON.stringify(data, null, 2)}
                                         readOnly={true}
-                />
+                                    />
                                 )}
                             </div>
+
                         </div>
                     </div> 
                 </div> 
