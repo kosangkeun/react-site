@@ -14,7 +14,7 @@ function Resultimg(){
                 <div class="col-lg-12">
 
                     <div class="accordion" id="accordionExample">
-                        <div class="card">
+                        <div class="card" id="videotestdiv">
                             <img src='images/Result.jpg' width="100%" height="100%"/>
                             
                         </div>
