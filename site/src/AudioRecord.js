@@ -86,7 +86,7 @@ const AudioRecord = () => {
       <button onClick={onRec ? onRecAudio : offRecAudio}>녹음</button>
       <button onClick={onSubmitAudioFile}>결과 확인</button>
     </>
-  );
+  );    
 };
 
 export default AudioRecord;

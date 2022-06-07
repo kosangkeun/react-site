@@ -48,6 +48,9 @@ function Inputvoice({keynum}){
         headers: {
           'Content-Type': 'application/json',
         },
+      }).then((res) =>{
+        let data = res.video;
+        console.log(data)
       });
     }
   }

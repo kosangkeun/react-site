@@ -6,7 +6,7 @@ import suzy from '../src/수지.jpg';
 import winter from '../src/윈터.jpg';
 import kalina from '../src/카리나.jpg';
 import React, { useState, useEffect } from "react";
-
+import axios from "axios"
 
 // function Selectimg(){
 //     const getImgBase64 = async (file) => {
@@ -50,7 +50,9 @@ function Selectimg({setkeynum}){
     const modelList = model_Img.map(
         (model_Img, model_Number) => (<img key={model_Number} src={model_Img} style={model_Size} onClick={(e) => setkeynum(model_Number)}/>));
     
-    
+
+
+        
     return(
         <div class="basic-4">
         <h2 id='Select'>1. Select Image</h2>
@@ -62,9 +64,7 @@ function Selectimg({setkeynum}){
                 <div class="col-lg-4">
                     <div class="text-container">
                         
-                        <div class="image-container">
-                            
-                                {/* <img class="img-fluid" key= '1' src={winter} alt="alternative" onClick={(e) => getImgmodel(winter)}/> */}
+                        <div class="image-container">          
                                 {modelList[0]}
                         </div>
                         <p></p>
@@ -72,9 +72,7 @@ function Selectimg({setkeynum}){
                 </div> 
                 <div class="col-lg-4">
                     <div class="text-container">
-                        <div class="image-container">
-                            
-                                {/* <img class="img-fluid" key= '2' src={suzy} alt="alternative" onClick={(e) => getImgmodel(suzy)}/> */}
+                        <div class="image-container">      
                                 {modelList[1]}
                         </div> 
                         
@@ -83,8 +81,6 @@ function Selectimg({setkeynum}){
                 <div class="col-lg-4">
                     <div class="text-container">
                         <div class="image-container">
-                            
-                                {/* <img class="img-fluid" key= '3' src={chu} alt="alternative" onClick={(e) => getImgmodel(chu)}/> */}
                                 {modelList[2]}
                         </div> 
                        
@@ -95,8 +91,6 @@ function Selectimg({setkeynum}){
                 <div class="col-lg-4">
                     <div class="text-container">
                         <div class="image-container">
-                            
-                                {/* <img class="img-fluid" key= '4' src={boyuong} alt="alternative" onClick={(e) => getImgmodel(boyuong)}/> */}
                                 {modelList[3]}
                         </div> 
                         
@@ -104,9 +98,7 @@ function Selectimg({setkeynum}){
                 </div> 
                 <div class="col-lg-4">
                     <div class="text-container">
-                        <div class="image-container">
-                            
-                                {/* <img class="img-fluid" key= '5' src={kalina} alt="alternative" onClick={(e) => getImgmodel(kalina)}/> */}
+                        <div class="image-container">                         
                                 {modelList[4]}
                         </div> 
                         
@@ -114,9 +106,7 @@ function Selectimg({setkeynum}){
                 </div> 
                 <div class="col-lg-4">
                     <div class="text-container">
-                        <div class="image-container">
-                            
-                                {/* <img class="img-fluid" key= '6' src={sejeng} alt="alternative" onClick={(e) => getImgmodel(sejeng)}/> */}
+                        <div class="image-container">                           
                                 {modelList[5]}
                         </div> 
                         
