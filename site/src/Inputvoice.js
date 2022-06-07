@@ -1,10 +1,15 @@
 import { useState } from 'react';
 import axios from 'axios';
 import uuid from 'react-uuid';
+import React, { useEffect } from "react";
+// 
 
 function Inputvoice({keynum}){
 
-
+  useEffect(() => {
+    console.log("111");
+  })
+  
   const userId = uuid();
 
   const [audio_base64, setAudioBase64] = useState("");
@@ -40,6 +45,7 @@ function Inputvoice({keynum}){
     await getAudioBase64(audio);
     request_json['voice'] = audio_base64;
     console.log(request_json)
+
     if(audio){
       await axios({
         method: 'post',
@@ -53,6 +59,7 @@ function Inputvoice({keynum}){
         console.log(data)
       });
     }
+    
   }
   
     return(
