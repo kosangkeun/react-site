@@ -4,13 +4,44 @@ import uuid from 'react-uuid';
 import React, { useEffect } from "react";
 import videotest from '../src/교수님.mp4';
 import ReactDOM from 'react-dom'
+import { Buffer } from 'buffer';
 function Inputvoice({keynum}){
 
 
   const [isOnline, setIsOnline] = useState(null);
   const [test_number, setTest_number] = useState(0);
 
+  // https://www.code-helper.com/answers/decodes-a-string-of-data-which-has-been-encoded-using-base-64-encoding-nodejs
 
+  const atob = (str) => Buffer.from(str, "base64").toString("binary");
+
+  const b64toBlob = (b64Data, contentType = "", sliceSize = 512) => {
+    const byteCharacters = atob(b64Data);
+    const byteArrays = [];
+
+    for (let offset = 0; offset < byteCharacters.length; offset += sliceSize) {
+      const slice = byteCharacters.slice(offset, offset + sliceSize);
+
+      const byteNumbers = new Array(slice.length);
+      for (let i = 0; i < slice.length; i++) {
+        byteNumbers[i] = slice.charCodeAt(i);
+      }
+
+      const byteArray = new Uint8Array(byteNumbers);
+      byteArrays.push(byteArray);
+    }
+
+    const blob = new Blob(byteArrays, { type: contentType });
+    return blob;
+  };
+
+  const blobToDataURL = (blob, callback) => {
+    var a = new FileReader();
+    a.onload = function (e) {
+      callback(e.target.result);
+    };
+    a.readAsDataURL(blob);
+  };
   // useEffect(() => {
   //   console.log("생성");
   // }, []); // Component가 mount 됐을때(쳐음 나타났을때)
@@ -19,32 +50,9 @@ function Inputvoice({keynum}){
     console.log("리랜더링");
   }); // Component가 리랜더링 됐을때
 
-
-// 신경 ㄴㄴ
-{/* <div id="accordion-1">
-<div class="container">
-<div class="row">
-    <div class="col-lg-12">
-        <h2 class="h2-heading">Result</h2>                 
-    </div> 
-</div> 
-<div class="row">
-    <div class="col-lg-12">
-        <div class="accordion" id="accordionExample">
-            <div class="card">
-              <video id='customvideo' src={videotest}></video>                         
-            </div>                                  
-        </div> 
-
-    </div> 
-</div> 
-</div> 
-</div> */}
-
-
-
   useEffect(() => {
     if(isOnline != null){
+
     console.log('업데이트');
 
       const element = (
@@ -56,7 +64,7 @@ function Inputvoice({keynum}){
             <div class="col-lg-12">
                 <div class="accordion" id="accordionExample">
                     <div class="card" id="videotest">
-                      <video autoPlay controls id='customvideo' src={videotest}></video>                         
+                      <video autoPlay controls id='customvideo' src={isOnline}></video>                         
                     </div>                                  
                 </div> 
 
@@ -135,10 +143,21 @@ function Inputvoice({keynum}){
           'Content-Type': 'application/json',
         },
       }).then((res) =>{
-        const videodata = res.data;
+
+        const data = res.data;
+        console.log(data.video)
+
+        if (data.error === "" || data.error == undefined){
+          var video_data = data.video
+          const blob = b64toBlob(video_data, "video/mp4");
+          blobToDataURL(blob, function (dataurl) {
+            setIsOnline(dataurl)
+          });
+        }else{
+          console.log(data.error)
+          alert("실패!")
+        }
         
-        setIsOnline(videodata.video) 
-        console.log(videodata.video)
       });
     }
     
