@@ -105,29 +105,31 @@ function Inputvoice({keynum}){
     reader.onload = () => {
       console.log(reader.result);
       setAudioBase64(reader.result);
+      
     };
   };
 
   const onChangeAudio = (e) => {
     e.preventDefault();
-    const reader = new FileReader();
+    //const reader = new FileReader();
     if(e.target.files[0]){
-      reader.readAsDataURL(e.target.files[0])
+      //reader.readAsDataURL(e.target.files[0])
       setAudio(e.target.files[0])
+      getAudioBase64(e.target.files[0]);
     }
+    
   };
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    console.log(audio)
-    await getAudioBase64(audio);
+    console.log(audio);
     request_json['voice'] = audio_base64;
-    console.log(request_json)
+    console.log(request_json);
     setTest_number(1);
     if(audio){
       await axios({
         method: 'post',
-        url: 'http://192.168.154.43:5000',
+        url: 'http://192.168.154.67:5000/cdhd/request_video',
         data: JSON.stringify(request_json),
         headers: {
           'Content-Type': 'application/json',
