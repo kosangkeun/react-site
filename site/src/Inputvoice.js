@@ -2,7 +2,6 @@ import { useState } from 'react';
 import axios from 'axios';
 import uuid from 'react-uuid';
 import React, { useEffect } from "react";
-import videotest from '../src/교수님.mp4';
 import ReactDOM from 'react-dom'
 import { Buffer } from 'buffer';
 function Inputvoice({keynum}){

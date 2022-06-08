@@ -1,10 +1,10 @@
 
 import chu from '../src/츄.jpg';
-import sejeng from '../src/김세정.jpg';
+import woman from '../src/여성데모.png';
 import boyuong from '../src/박보영.jpg';
-import suzy from '../src/수지.jpg';
-import winter from '../src/윈터.jpg';
-import kalina from '../src/카리나.jpg';
+import obama from '../src/오바마.PNG';
+import jungho from '../src/정호형.PNG';
+import dongju from '../src/동주형.PNG';
 import React, { useState, useEffect } from "react";
 import axios from "axios"
 
@@ -46,7 +46,7 @@ function Selectimg({setkeynum}){
 
     };
     
-    const model_Img = [winter, suzy, chu, boyuong, kalina, sejeng];
+    const model_Img = [obama, jungho, dongju, woman, boyuong, chu ];
     const modelList = model_Img.map(
         (model_Img, model_Number) => (<img key={model_Number} src={model_Img} style={model_Size} onClick={(e) => setkeynum(model_Number)}/>));
     
