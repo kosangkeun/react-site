@@ -8,6 +8,7 @@ function Inputvoice({keynum}){
 
 
   const [isOnline, setIsOnline] = useState(null);
+  const [test_number, setTest_number] = useState(0);
 
 
   // useEffect(() => {
@@ -43,8 +44,9 @@ function Inputvoice({keynum}){
 
 
   useEffect(() => {
+    if(test_number==1){
     console.log('업데이트');
-    
+    console.log(test_number);
       const element = (
         <div id="accordion-1">
         <div class="container">
@@ -65,7 +67,26 @@ function Inputvoice({keynum}){
       );
       ReactDOM.render(element, document.getElementById('videotestdiv'));
       
-  }, [isOnline]); // Component가 업데이트 됐을때
+  }else {
+  const element = (
+    <div id="accordion-1">
+    <div class="container">
+    <div class="row">
+    </div> 
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="accordion" id="accordionExample">
+                <div class="card" id="videotest">
+                <img src='images/Result.jpg' width="100%" height="100%"/>                        
+                </div>                                  
+            </div> 
+
+        </div> 
+    </div> 
+    </div> 
+    </div>
+  );
+  ReactDOM.render(element, document.getElementById('videotestdiv'));}}, [isOnline]); // Component가 업데이트 됐을때
 
   const userId = uuid();
 
@@ -102,7 +123,7 @@ function Inputvoice({keynum}){
     await getAudioBase64(audio);
     request_json['voice'] = audio_base64;
     console.log(request_json)
-    
+    setTest_number(1);
     if(audio){
       await axios({
         method: 'post',
