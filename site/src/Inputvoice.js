@@ -44,9 +44,9 @@ function Inputvoice({keynum}){
 
 
   useEffect(() => {
-    if(test_number==1){
+    if(isOnline != null){
     console.log('업데이트');
-    console.log(test_number);
+
       const element = (
         <div id="accordion-1">
         <div class="container">
@@ -135,9 +135,10 @@ function Inputvoice({keynum}){
           'Content-Type': 'application/json',
         },
       }).then((res) =>{
-        let videodata = res.video;
-        setIsOnline(videodata) 
-        console.log(videodata)
+        const videodata = res.data;
+        
+        setIsOnline(videodata.video) 
+        console.log(videodata.video)
       });
     }
     
