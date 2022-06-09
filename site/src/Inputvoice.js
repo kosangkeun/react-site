@@ -4,11 +4,27 @@ import uuid from 'react-uuid';
 import React, { useEffect } from "react";
 import ReactDOM from 'react-dom'
 import { Buffer } from 'buffer';
+import SubmitButton from './SubmitButton';
+import LoadingButton from "@mui/lab/LoadingButton";
+
+const submitStyle = {
+  width: "200px",
+  textTransform: "none",
+  fontSize: "20px",
+  fontWeight: "bold",
+};
+
+const loadingStyle = {
+  ...submitStyle,
+  backgroundColor: "rgb(224, 224, 224)",
+};
+
 function Inputvoice({keynum}){
 
 
   const [isOnline, setIsOnline] = useState(null);
   const [test_number, setTest_number] = useState(0);
+  const [disabled, setDisabled] = useState(false);
 
   // https://www.code-helper.com/answers/decodes-a-string-of-data-which-has-been-encoded-using-base-64-encoding-nodejs
 
@@ -127,12 +143,15 @@ function Inputvoice({keynum}){
     
   };
 
+
+
   const onSubmit = async (e) => {
     e.preventDefault();
     console.log(audio);
     request_json['voice'] = audio_base64;
     console.log(request_json);
     setTest_number(1);
+    setDisabled(true)
     if(audio){
       await axios({
         method: 'post',
@@ -142,7 +161,6 @@ function Inputvoice({keynum}){
           'Content-Type': 'application/json',
         },
       }).then((res) =>{
-
         const data = res.data;
         console.log(data.video)
 
@@ -157,10 +175,17 @@ function Inputvoice({keynum}){
           alert("실패!")
         }
         
+      })
+      .catch((err) => {
+        console.log("Generate 버튼 전송 POST 실패");
+        console.log(err);
+      })
+      .then(() => {
+        setDisabled(false);
       });
     }
     
-  }
+  };
   
     return(
         <div id="cards-1">
@@ -178,7 +203,19 @@ function Inputvoice({keynum}){
                     <div class="card">
                         <div class="card-body">
                         <input type="file" id="avatar" name="avatar" accept="audio/*" onChange={onChangeAudio}></input>
-                        <button type="submit" class="form-control-submit-button"  value="Upload File"  >전송</button>
+                        {disabled ? (
+                          <LoadingButton
+                            style={loadingStyle}
+                            loading
+                            loadingPosition="end"
+                            variant="contained"
+                            component="span"
+                          >
+                            Loading
+                          </LoadingButton>
+                        ) : (
+                          <SubmitButton style={submitStyle} />
+                        )}
                         </div>
                     </div>
 
