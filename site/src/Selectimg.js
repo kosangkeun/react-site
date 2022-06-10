@@ -73,7 +73,7 @@ function Selectimg({setkeynum}){
                 <div class="col-lg-4">
                     <div class="text-container">
                         <div class="image-container">      
-                                {modelList[2]}
+                                {modelList[1]}
                         </div> 
                         
                     </div> 
@@ -81,7 +81,7 @@ function Selectimg({setkeynum}){
                 <div class="col-lg-4">
                     <div class="text-container">
                         <div class="image-container">
-                                {modelList[1]}
+                                {modelList[2]}
                         </div> 
                        
                     </div>
